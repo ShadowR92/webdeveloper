@@ -41,6 +41,9 @@ p {
 
     background: #000 url("../img/bg.jpg") center no-repeat;
     background-size: cover; /*на весь экран*/
+
+    min-height: 770px;/*минимальная высота, если экран меньше будет прокрутка сайта вниз*/
+    overflow: hidden;/*спрячем кусок картинки на айпаде*/
 }
 
 /*Header
@@ -108,8 +111,8 @@ p {
 ==============*/
 .content {
     height: 100%;
-    width: 100%;
-    max-width: 565px;
+    width: 100%;/*для адаптивности*/
+    max-width: 565px;/*для адаптивности*/
 }
 
 .content-header {
@@ -178,7 +181,7 @@ p {
 ==============*/
 
 .author {
-    width: 365px;
+    width: 400px;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -292,66 +295,67 @@ p {
 @media (max-width: 767px) {
 
     .page {
-        min-height: 100vh;
-        height: auto;
-        padding-bottom: 2rem;
+        min-height: 100vh;/*минимум высота блока*/
+        height: auto;/*высота зависит от контента*/
+        padding-bottom: 2rem;/*отделим контакты от низа*/
     }
 
     /* Header */
     .header {
-        margin-bottom: 50px;
+        margin-bottom: 50px;/*отступ после шапки*/
     }
 
     .header-logo {
-        display: none;
+        display: none; /*спрячем лого*/
     }
 
     .header-brand {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /*уменьшим надпись вебдевелопер*/
     }
 
 
     /* Content */
     .content {
-        max-width: none;
-        margin-bottom: 50px;
+        max-width: none;/*уберем ширину блока, чтобы форма встала по центру*/
+        margin-bottom: 50px;/*отступ снизу после контента, отделим футер*/
 
-        text-align: center;
+        text-align: center;/*контент по центру*/
     }
 
 
     /* Form */
     .form {
-        margin: 0 auto;
+        margin: 0 auto;/*форма по центру*/
     }
 
 
     /* Footer */
     .footer {
-        position: static;
+        position: static;/*вернем наши мыло и тел в поток*/
     }
 
 
     /* Contacts */
     .contacts {
-        flex-direction: column;
+        flex-direction: column;/*мыло и телефон друг под другом*/
     }
 
     .contacts-link {
-        margin-right: 0;
-        margin-bottom: .5rem;
+        margin-right: 0; /*отступ справа ссылкам не нужен*/
+        margin-bottom: .5rem;/*отделим друг от друга*/
     }
 
     .contacts-link:last-child {
-        margin-bottom: 0;
+        margin-bottom: 0;/*у последней уберем отступ снизу*/
     }
 
-    .contacts-link:last-child:after {
+    .contacts-link:last-child:after {/*уберем белую полоску*/
         display: none;
     }
 
     /* Author */
     .author {
+        width: 100px;
         display: none;
     }
 }
@@ -360,10 +364,10 @@ p {
 
     /* Header */
     .header-inner {
-        flex-direction: column;
+        flex-direction: column; /*флекс айтемы шапки друг под другом*/
     }
 
-    .header-brand {
+    .header-brand {/*отступ снизу в шапке 15 */
         margin-bottom: 1rem;
     }
 }
@@ -371,11 +375,11 @@ p {
 
 @media (max-width: 320px) {
     .subtitle {
-        font-size: 1.2rem;
+        font-size: 1.2rem;/*резмер шрифта my name*/
     }
 
     .title {
-        font-size: 1.6rem;
+        font-size: 1.6rem;/*имя шрифт уменьшим*/
     }
 }
 
