@@ -25,8 +25,9 @@ p {
 }
 
 .container {
+    padding: 0 1rem; /*чтобы при скроле контент не прилипал к краям*/
     width: 100%;
-    max-width: 1000px;
+    max-width: 1030px; /*увеличили на 30 так как пэдинги добавили*/
     margin: 0 auto;
 }
 
@@ -106,7 +107,13 @@ p {
 /*Content
 ==============*/
 .content {
-    width: 565px;
+    height: 100%;
+    width: 100%;
+    max-width: 565px;
+}
+
+.content-header {
+    margin-bottom: 35px;
 }
 
 .subtitle {
@@ -117,7 +124,8 @@ p {
 }
 
 .title {
-    margin-bottom: 35px;
+    margin-bottom: 10px;
+
     font-size: 2rem;
     color: #fff;
     font-weight: 500;
@@ -142,13 +150,15 @@ p {
 .btn {
     display: inline-block;
     padding: 12px 35px;
-
+    font-family: inherit;
     font-size: 1rem;
     line-height: 1.1;
     color: #fff;
     font-weight: 500;
     text-decoration: none;
 
+    cursor: pointer;
+    border: 0;
     background-color: #2B7DED;
     border-radius: 5px;
 
@@ -159,14 +169,19 @@ p {
     background-color: #1630ed;
 }
 
+.btn-full {
+    display: block;
+    width: 100%;
+}
+
 /*Author
 ==============*/
 
 .author {
     width: 365px;
     position: absolute;
-    bottom: 0px;
-    right: 0px;
+    bottom: 0;
+    right: 0;
 }
 
 /*Footer
@@ -211,7 +226,7 @@ p {
     margin-left: 2rem;
 
     background-color: #fff;
-    pointer-events: none;/*поведение убрали, просто декорация*/
+    pointer-events: none; /*поведение убрали, просто декорация*/
 
     position: absolute;
     left: 100%;
@@ -225,3 +240,154 @@ p {
 .contacts-icon {
     margin-right: 5px;
 }
+
+
+/*Form
+==============*/
+
+.form {
+    width: 100%;
+    max-width: 280px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input,
+.textarea {
+    display: block;
+    width: 100%; /*на всю ширину блока в котором он*/
+    padding: 12px 18px;
+    color: #fff;
+
+    font-family: inherit; /*наследовать родителя*/
+    font-size: 1rem;
+    border: 0; /*уберем бордеры*/
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 5px;
+}
+
+.textarea {
+    height: 100px;
+    resize: none; /*уберем растяжку у тестполя*/
+}
+
+.input::placeholder,
+.textarea::placeholder { /*важно два :*/ /*меняем плейс на белый*/
+    color: #fff;
+}
+
+/* Media
+=================*/
+
+@media (max-width: 1000px) {
+
+    .author {
+        right: -170px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .page {
+        min-height: 100vh;
+        height: auto;
+        padding-bottom: 2rem;
+    }
+
+    /* Header */
+    .header {
+        margin-bottom: 50px;
+    }
+
+    .header-logo {
+        display: none;
+    }
+
+    .header-brand {
+        font-size: 1.2rem;
+    }
+
+
+    /* Content */
+    .content {
+        max-width: none;
+        margin-bottom: 50px;
+
+        text-align: center;
+    }
+
+
+    /* Form */
+    .form {
+        margin: 0 auto;
+    }
+
+
+    /* Footer */
+    .footer {
+        position: static;
+    }
+
+
+    /* Contacts */
+    .contacts {
+        flex-direction: column;
+    }
+
+    .contacts-link {
+        margin-right: 0;
+        margin-bottom: .5rem;
+    }
+
+    .contacts-link:last-child {
+        margin-bottom: 0;
+    }
+
+    .contacts-link:last-child:after {
+        display: none;
+    }
+
+    /* Author */
+    .author {
+        display: none;
+    }
+}
+
+@media (max-width: 565px) {
+
+    /* Header */
+    .header-inner {
+        flex-direction: column;
+    }
+
+    .header-brand {
+        margin-bottom: 1rem;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .title {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
