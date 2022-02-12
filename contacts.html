@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <!--шрифты перед css-->
@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <title>Personal Folio</title>
+    <title>Мои контакты</title>
 </head>
 <body>
 
@@ -18,18 +18,16 @@
     <header class="header">
         <div class="container">
             <div class="header-inner">
-                <div class="header-brand">
-                    WEBDEVELOPER
-                </div>
+                <div class="header-brand"><a class="logo-text" href="index.html">Улин Роман</a></div>
 
                 <div class="header-logo">
                     <img src="img/code.svg" alt="">
                 </div>
 
                 <nav class="header-nav">
-                    <a class="header-nav-link" href="index.html">Home</a>
-                    <a class="header-nav-link" href="about.html">About me</a>
-                    <a class="header-nav-link active" href="contacts.html">Contacts</a>
+                    <a class="header-nav-link" href="index.html">Главная</a>
+                    <a class="header-nav-link" href="about.html">Обо мне</a>
+                    <a class="header-nav-link active" href="contacts.html">Контакты</a>
                 </nav>
             </div>
         </div><!--/.container-->
@@ -40,15 +38,15 @@
     <div class="container">
         <main class="content">
             <div class="content-header">
-                <h1 class="title">Write me a <span>message</span></h1>
+                <h1 class="title">Связаться <span>со мной</span></h1>
                 <div class="text">
-                    <p>Many desktop publishing packages and web page editors now use Lorem</p>
+                    <p>Форма не работает, поскольку сайт открыт через Github Pages. Свяжитесь со мной через телефон или электронный адрес.</p>
                 </div>
             </div>
 
             <form class="form" action="/" method="post"><!--форма-->
                 <div class="form-group">
-                    <input class="input" type="text" name="name" placeholder="Name">
+                    <input class="input" type="text" name="name" placeholder="Имя">
                 </div>
 
                 <div class="form-group">
@@ -56,17 +54,18 @@
                 </div>
 
                 <div class="form-group">
-                    <input class="input" type="tel" name="tel" placeholder="Phone">
+                    <input class="input" type="tel" name="tel" placeholder="Телефон">
                 </div>
 
                 <div class="form-group">
-                    <textarea class="textarea" name="text" placeholder="Message" ></textarea>
+                    <textarea class="textarea" name="text" placeholder="Сообщение" ></textarea>
                 </div>
 
+                <!--
                 <div class="form-group">
-                    <button class="btn btn-full" type="submit">Send message</button><!--submit для отправки-->
+                    <button class="btn btn-full" type="submit">Отправить</button>
                 </div>
-
+                -->
 
             </form>
 

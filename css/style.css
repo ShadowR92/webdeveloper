@@ -135,7 +135,7 @@ p {
     line-height: 1.2;
 }
 
-.title span {
+.subtitle span {
     color: #2B7DED;
 }
 
@@ -383,13 +383,19 @@ p {
     }
 }
 
+.custom-link {
+    color: #fff;
+}
 
+.custom-link:hover {
+    text-decoration: none;
+    word-break: break-all;
+}
 
-
-
-
-
-
+.logo-text {
+    color: #fff;
+    text-decoration: none;
+}
 
 
 
