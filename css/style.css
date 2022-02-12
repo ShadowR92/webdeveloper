@@ -385,6 +385,9 @@ p {
 
 .custom-link {
     color: #fff;
+}
+
+custom-link_wrap {
     word-break: break-all;
 }
 
