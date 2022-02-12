@@ -385,11 +385,11 @@ p {
 
 .custom-link {
     color: #fff;
+    word-break: break-all;
 }
 
 .custom-link:hover {
     text-decoration: none;
-    word-break: break-all;
 }
 
 .logo-text {
